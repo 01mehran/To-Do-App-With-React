@@ -1,1 +1,51 @@
+/* Fonts */
+@font-face {
+  font-family: Oswald;
+  src: url("@/assets/fonts/Oswald/Oswald-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: NotoSans;
+  src: url("@/assets/fonts/notoSans/NotoSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inder;
+  src: url("@/assets/fonts/Inder/Inder-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 @import "tailwindcss";
+
+@theme {
+  /*------- Fonts */
+  --font-oswald: "Oswald", "sans-serif";
+  --font-notoSans: "NotoSans", "sans-serif";
+  --font-inder: "Inder", "sans-serif";
+
+  /*------- Colors */
+  --color-gray-100: #c4c4c4;
+  --color-gray-200: #ebebeb;
+  --color-gray-300: #f4f4f4;
+  --color-gray-400: #dddddd;
+  --color-gray-500: #c6c6c6;
+  --color-gray-600: #d9d9d933;
+
+  --color-green-100: #76de37;
+  --color-green-200: #61ff00;
+
+  --color-white: #fff9f9;
+  --color-red: #ff0000;
+  --color-blue: #5d7df0;
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
