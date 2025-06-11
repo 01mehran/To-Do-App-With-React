@@ -1,5 +1,11 @@
+import { Started } from "./pages/Started";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Started />
+    </>
+  );
 }
 
 export default App;
