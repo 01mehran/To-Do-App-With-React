@@ -1,9 +1,9 @@
-import { Started } from "./pages/Started";
+import { SignUp } from "./pages/SignUp";
 
 function App() {
   return (
     <>
-      <Started />
+      <SignUp />
     </>
   );
 }
