@@ -4,11 +4,10 @@ import { Menu } from "../components/Menu";
 
 export const Home = () => {
   return (
-    <div className=" gap-6  bg-gray-300 lg:bg-[#fff] min-h-screen grid grid-rows-[auto_1fr] lg:grid-rows-[1fr] ">
+    <div className=" px-5 py-4 gap-6 bg-gray-300 lg:bg-[#fff] min-h-screen grid grid-rows-[auto_1fr] lg:grid-rows-[1fr] ">
       {/* <Burger Icon /> */}
       <BurgerIcon />
-      <div className="flex gap-6 px-5 py-4">
-        
+      <div className="flex gap-6 ">
         {/* // Menu.... */}
         <Menu />
 

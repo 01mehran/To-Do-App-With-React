@@ -1,10 +1,10 @@
 
-import { Home } from "./pages/Home";
+import { Upcoming } from "./pages/Upcoming";
 
 function App() {
   return (
     <>
-      <Home />
+      <Upcoming />
     </>
   );
 }
