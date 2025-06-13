@@ -1,10 +1,9 @@
-
-import { Upcoming } from "./pages/Upcoming";
+import { Today } from "./pages/Today";
 
 function App() {
   return (
     <>
-      <Upcoming />
+      <Today />
     </>
   );
 }
