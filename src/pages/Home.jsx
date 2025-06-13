@@ -1,5 +1,6 @@
 // components;
 import { BurgerIcon } from "@/components/BurgerIcon";
+import { Menu } from "../components/Menu";
 
 export const Home = () => {
   return (
@@ -7,7 +8,9 @@ export const Home = () => {
       {/* <Burger Icon /> */}
       <BurgerIcon />
       <div className="flex gap-6 px-5 py-4">
+        
         {/* // Menu.... */}
+        <Menu />
 
         {/* Main Content */}
         <main className=" grid w-full bg-transparent place-content-center rounded-[50px] lg:bg-gray-300">
