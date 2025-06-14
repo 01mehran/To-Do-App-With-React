@@ -37,7 +37,7 @@ export const Register = () => {
             <div className="focus-within:ring-green-100 flex items-center rounded-[7px] border border-black/60 px-2 py-1 focus-within:border-transparent focus-within:ring-2">
               <input type={isShow ? "password" : "text"} placeholder="password" className="accent-green-100 w-full border-0 outline-0"/>
               <div className="cursor-pointer" onClick={showHideHander}>
-                {isShow ? <FaEyeSlash /> : <FaEye />}
+                {isShow ? <FaEye /> : <FaEyeSlash />}
               </div>
             </div>
             <Input placeholder={"Re-enter the password"} type={"password"} />

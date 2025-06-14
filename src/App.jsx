@@ -1,9 +1,9 @@
-import { Calendar } from "./pages/Calendar";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
     <>
-      <Calendar />
+    <NotFound />
     </>
   );
 }
