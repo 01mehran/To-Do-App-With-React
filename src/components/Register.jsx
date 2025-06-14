@@ -9,6 +9,9 @@ import { ToDoImg } from "./ToDoImg";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 
+// 
+import { Link } from "react-router-dom"
+
 export const Register = () => {
   const [isShow, setIsShow] = useState("false");
 
@@ -47,7 +50,7 @@ export const Register = () => {
             </button>
           </form>
           <p className="font-notoSans mt-6 text-[15px] font-medium text-black">
-            Already have an account? Sign In
+            Already have an account? <Link to="/Login" className="hover:text-green-200">Sign In</Link> 
           </p>
         </main>
       </div>
@@ -55,4 +58,4 @@ export const Register = () => {
   );
 };
 
-export default Register;
+export default Regist

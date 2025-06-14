@@ -4,6 +4,9 @@ import ListIcon from "@/assets/icons/listIcon.svg";
 import CalendarIcon from "@/assets/icons/calendaricon.svg";
 import NoteIcon from "@/assets/icons/NoteIcon.svg";
 
+// Link
+import { Link } from "react-router-dom";
+
 export const Tasks = ({isOpen}) => {
   
   return (
@@ -16,7 +19,7 @@ export const Tasks = ({isOpen}) => {
             <div className="flex items-center gap-1.5">
               <img src={upComingIcon} alt="upComingIcon" className="w-5" />
               <span className="font-notoSans text-sm font-medium text-black/70">
-                <a href="/upcomingPage">Upcoming</a> 
+                <Link to="/UpComing">Upcoming</Link> 
               </span>
             </div>
             <span className={`bg-gray-200 text font-notoSans w-7 rounded-full text-center text-[11px] text-black/70 ${isOpen ? "" : "hidden"}`}>
@@ -29,7 +32,7 @@ export const Tasks = ({isOpen}) => {
             <div className="flex items-center gap-1.5">
               <img src={ListIcon} alt="ListIcon" className="w-5" />
               <span className="font-notoSans text-sm font-medium text-black/70">
-              <a href="/todaypage">Today</a>  
+              <Link to="/Today">Today</Link>  
               </span>
             </div>
             <span className={`bg-gray-200 text font-notoSans w-7 rounded-full text-center text-[11px] text-black/70 ${isOpen ? "" : "hidden"}`}>
@@ -42,7 +45,7 @@ export const Tasks = ({isOpen}) => {
             <div className="flex items-center gap-1.5">
               <img src={CalendarIcon} alt="CalendarIcon" className="w-5" />
               <span className="font-notoSans text-sm font-medium text-black/70">
-                <a href="/calendarPage">Calendar</a>  
+                <Link to="/Calendar">Calendar</Link>  
               </span>
             </div>
           </article>

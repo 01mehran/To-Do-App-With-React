@@ -10,6 +10,9 @@ import LogoutIcon from "../assets/icons/logoutIcon.svg";
 import { Tasks } from "./Tasks";
 import { Lists } from "./Lists";
 
+// Link;
+import { Link } from "react-router-dom";
+
 export const Menu = () => {
   const [isOpen, setIsOpen] = useState("false");
 
@@ -23,7 +26,7 @@ export const Menu = () => {
 
     {/* Header */}
     <header className="flex items-center justify-between">
-        <h1 className={`font-oswald font-semibold1 text-4xl ${isOpen ? "" : "text-[25px]"}`}> <a href="/home">Menu</a></h1>
+        <h1 className={`font-oswald font-semibold1 text-4xl ${isOpen ? "" : "text-[25px]"}`}> <Link to="/Home">Menu</Link></h1>
         <button onClick={menuHandler}  className="flex h-6 w-6 cursor-pointer flex-col items-center justify-evenly ">
             <span className="h-[3px] w-full rounded-[2px] bg-black"></span>
             <span className="h-[3px] w-full rounded-[2px] bg-black"></span>

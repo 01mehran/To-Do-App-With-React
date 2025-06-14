@@ -2,6 +2,9 @@
 import { BurgerIcon } from "@/components/BurgerIcon";
 import { Menu } from "../components/Menu";
 
+// Link;
+import { Link } from "react-router-dom";
+
 export const Home = () => {
   return (
     <div className=" px-5 py-4 gap-6 bg-gray-300 lg:bg-[#fff] min-h-screen grid grid-rows-[auto_1fr] lg:grid-rows-[1fr] ">
@@ -28,9 +31,11 @@ export const Home = () => {
               forgotten.
             </p>
             {/* Button */}
-            <button className="font-oswald bg-green-100 h-[42px] max-w-[218px] w-full cursor-pointer rounded-[10px] text-xl sm:text-[24px] font-normal transition-all duration-300 hover:translate-y-1">
-              Go to tasks
-            </button>
+            <Link to="/Upcoming">
+              <button className="font-oswald bg-green-100 h-[42px] max-w-[218px] w-full cursor-pointer rounded-[10px] text-xl sm:text-[24px] font-normal transition-all duration-300 hover:translate-y-1">
+                Go to tasks
+              </button>
+            </Link>
           </div>
         </main>
       </div>

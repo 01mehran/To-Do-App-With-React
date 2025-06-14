@@ -9,6 +9,9 @@ import { FaEyeSlash } from "react-icons/fa";
 // States;
 import { useState } from "react";
 
+// Link;
+import { Link } from "react-router-dom";
+
 
 export const SignIn = () => {
 
@@ -56,10 +59,8 @@ export const SignIn = () => {
           <SocialMediaIcons />
 
           <p className="font-inder mt-6 text-[15px] font-medium text-black">
-            Don't have an account? Sign up
+            Don't have an account? <Link to="/SignUp" className="hover:text-green-200">Sign up</Link> 
           </p>
         </main>
       </section>
     </div>
-  );
-};
