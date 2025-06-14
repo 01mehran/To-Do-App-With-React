@@ -1,9 +1,9 @@
-import { Today } from "./pages/Today";
+import { Calendar } from "./pages/Calendar";
 
 function App() {
   return (
     <>
-      <Today />
+      <Calendar />
     </>
   );
 }
