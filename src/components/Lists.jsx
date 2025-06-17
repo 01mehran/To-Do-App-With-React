@@ -1,5 +1,5 @@
 // Icons;
-import plusIcon from "@/assets/icons/plusIcon.svg";
+import plusIcon from "@icons/plusIcon.svg";
 
 export const Lists = () => {
   return (

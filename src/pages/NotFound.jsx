@@ -1,3 +1,5 @@
+// Link;
+import { Link } from "react-router-dom";
 
 export const NotFound = () => {
   return (
@@ -10,15 +12,15 @@ export const NotFound = () => {
           No internet connection or wrong path!
         </span>
         <div className="bg-gray-400 grid w-full grid-cols-3 divide-x-[1px] divide-black/30 rounded-sm py-1.5 sm:w-[300px] sm:divide-x-[2px] sm:py-3">
-          <a href="/home" className="text-center text-[4vw] text-black/80 sm:text-base">
+          <Link to="/Home" className="text-center text-[4vw] text-black/80 sm:text-base">
             Home
-          </a>
-          <a href="/upComingPage" className="text-center text-[4vw] text-black/80 sm:text-base">
+          </Link>
+          <Link to="/Upcoming" className="text-center text-[4vw] text-black/80 sm:text-base">
             Upcoming
-          </a>
-          <a href="/todayPage"  className="text-center text-[4vw] text-black/80 sm:text-base">
+          </Link>
+          <Link to="/Today"  className="text-center text-[4vw] text-black/80 sm:text-base">
             Today
-          </a>
+          </Link>
         </div>
       </article>
     </div>

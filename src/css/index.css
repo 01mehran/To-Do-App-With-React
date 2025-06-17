@@ -44,7 +44,7 @@
   --color-blue: #5d7df0;
 }
 
-/* Hide Scrollbar */
+/* Hide Box Scrollbar */
 ::-webkit-scrollbar {
   width: 0px;
   background-color: transparent;

@@ -1,4 +1,4 @@
-// State
+// State;
 import { useState } from "react";
 
 // Components;
@@ -9,12 +9,14 @@ import { ToDoImg } from "./ToDoImg";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 
-// 
+//Link;
 import { Link } from "react-router-dom"
 
 export const Register = () => {
+  // States;
   const [isShow, setIsShow] = useState("false");
 
+  // Functions;
   const showHideHander = () => {
     setIsShow(!isShow);
   };
@@ -50,12 +52,10 @@ export const Register = () => {
             </button>
           </form>
           <p className="font-notoSans mt-6 text-[15px] font-medium text-black">
-            Already have an account? <Link to="/Login" className="hover:text-green-200">Sign In</Link> 
+            Already have an account? <Link to="/login" className="hover:text-green-200">Sign In</Link> 
           </p>
         </main>
       </div>
     </div>
   );
 };
-
-export default Regist

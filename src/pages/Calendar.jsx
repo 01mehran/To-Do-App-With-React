@@ -1,15 +1,12 @@
 // Components
-import { BurgerIcon } from "@/components/BurgerIcon";
 import { Menu } from "@/components/Menu";
 
 export const Calendar = () => {
   return (
-    <div className="flex gap-6 px-4 py-5 h-screen overflow-hidden">
+    <div className="flex flex-col lg:flex-row gap-6 px-4 py-5 h-screen overflow-hidden">
       {/* Menu */}
       <Menu />
       <div className="w-full flex flex-col h-full">
-        {/* BurgerButton */}
-        <BurgerIcon />
         <header className="flex flex-col space-y-3 items-center w-full sm:flex-row justify-between">
           <div className="space-y-3">
             {/* Date */}

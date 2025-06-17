@@ -1,4 +1,5 @@
-import { LandingDemo } from "../components/LandingDemo";
+// Components;
+import { LandingDemo } from "@/components/LandingDemo";
 
 export const Started = () => {
   return (

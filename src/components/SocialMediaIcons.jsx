@@ -1,5 +1,7 @@
-import googleIcon from "@/assets/icons/google_icon.svg";
-import FacebookIcon from "@/assets/icons/Facebook_icon.svg";
+// Icons;
+import googleIcon from "@icons/google_icon.svg";
+import FacebookIcon from "@icons/Facebook_icon.svg";
+
 export const SocialMediaIcons = () => {
   return (
     <article className="font-inder flex w-full items-center justify-between">

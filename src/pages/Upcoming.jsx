@@ -1,15 +1,11 @@
 // Components;
-import { BurgerIcon } from "../components/BurgerIcon";
-import { Menu } from "../components/Menu";
-import { ToDo } from "../components/ToDo";
+import { Menu } from "@/components/Menu";
+import { ToDo } from "@/components/ToDo";
 
 export const Upcoming = () => {
   return (
-    <div className="flex gap-6 px-5 py-4">
+    <div className="flex flex-col lg:flex-row gap-6 px-5 py-4">
       <Menu />
-      <div className=" w-full">
-        <BurgerIcon />
-
         <div className="flex w-full flex-col">
           <div>
             <ToDo context="Upcoming" num={18} Today="Today" />
@@ -20,6 +16,5 @@ export const Upcoming = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };

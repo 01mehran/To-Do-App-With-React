@@ -14,9 +14,10 @@ import { Link } from "react-router-dom";
 
 
 export const SignIn = () => {
-
+// States;
   const [isShow, setIsShow] = useState("false");
 
+  // Functions;
   const showHideHander = () => {
     setIsShow(!isShow)
   }
@@ -59,8 +60,10 @@ export const SignIn = () => {
           <SocialMediaIcons />
 
           <p className="font-inder mt-6 text-[15px] font-medium text-black">
-            Don't have an account? <Link to="/SignUp" className="hover:text-green-200">Sign up</Link> 
+            Don't have an account? <Link to="/signup" className="hover:text-green-200">Sign up</Link> 
           </p>
         </main>
       </section>
     </div>
+  );
+};

@@ -15,12 +15,12 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Started />} />
-      <Route path="/Login" element={<LogIn />} />
-      <Route path="/SignUp" element={<SignUp />} />
-      <Route path="/Home" element={<Home />} />
-      <Route path="/UpComing" element={<Upcoming />} />
-      <Route path="/Today" element={<Today />} />
-      <Route path="/Calendar" element={<Calendar />} />
+      <Route path="/login" element={<LogIn />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/upcoming" element={<Upcoming />} />
+      <Route path="/today" element={<Today />} />
+      <Route path="/calendar" element={<Calendar />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

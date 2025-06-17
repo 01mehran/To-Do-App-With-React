@@ -1,3 +1,4 @@
+// Components;
 import { Register } from "@/components/Register";
 
 export const SignUp = () => {
