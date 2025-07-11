@@ -1,8 +1,12 @@
+
 /* Fonts */
 @font-face {
   font-family: Oswald;
-  src: url("@/assets/fonts/Oswald/Oswald-VariableFont_wght.ttf")
-    format("truetype");
+  src:
+    url("@fonts/Oswald/oswald-variablefont_wght-webfont.woff2") format("woff2"),
+    url("@fonts/Oswald/oswald-variablefont_wght-webfont.woff") format("woff"),
+    url("@fonts/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+
   font-weight: 100 900;
   font-style: normal;
 }
@@ -15,7 +19,10 @@
 }
 @font-face {
   font-family: Inder;
-  src: url("@/assets/fonts/Inder/Inder-Regular.ttf") format("truetype");
+  src:
+    url("@fonts/Inder/inder-regular-webfont.woff") format("woff2"),
+    url("@fonts/Inder/inder-regular-webfont.woff2") format("woff"),
+    url("@fonts/Inder/Inder-Regular.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -48,4 +55,9 @@
 ::-webkit-scrollbar {
   width: 0px;
   background-color: transparent;
+  /* display: none; */
 }
+::-webkit-scrollbar {
+  display: none;
+}
+

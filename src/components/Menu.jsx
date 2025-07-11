@@ -22,7 +22,7 @@ export const Menu = () => {
     <div className="relative">
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/30 bg-opacity-40 z-40"
+          className="fixed inset-0 bg-black/30 bg-opacity-40 z-40 lg:hidden"
           onClick={() => setIsMenuOpen(false)}
         />
       )}

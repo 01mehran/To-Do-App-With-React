@@ -23,8 +23,8 @@ export const SignIn = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <section className="flex flex-col-reverse items-center justify-center gap-5 px-3 pt-10 md:flex-row">
+    <div className="bg-gray-100 min-h-screen py-5 md:py-0">
+      <section className="flex flex-col-reverse items-center justify-center gap-5 px-3 md:flex-row min-h-screen">
        {/* To-Do Image */}
         <ToDoImg />
 

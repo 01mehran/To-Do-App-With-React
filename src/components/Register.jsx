@@ -22,8 +22,8 @@ export const Register = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <div className="flex flex-col-reverse items-center justify-center gap-5 px-3 pt-10 md:flex-row">
+    <div className="bg-gray-100 min-h-screen py-5 md:py-0 ">
+      <div className="flex flex-col-reverse items-center justify-center gap-5 px-3 md:flex-row min-h-screen">
         {/* To-Do Image */}
         <ToDoImg />
         <main className="flex min-h-[600px] w-full flex-col items-center justify-center rounded-[40px] bg-white px-6 sm:max-w-[480px] sm:px-10 md:px-20">
@@ -36,8 +36,7 @@ export const Register = () => {
           {/* Form */}
           <form className="space-y-4">
             {/* Input Fields */}
-            <Input placeholder={"First Name"} type={"text"} />
-            <Input placeholder={"Last Name"} type={"text"} />
+            <Input placeholder={"UserName"} type={"text"} />
             <Input placeholder={"E-mail address"} type={"text"} />
             <div className="focus-within:ring-green-100 flex items-center rounded-[7px] border border-black/60 px-2 py-1 focus-within:border-transparent focus-within:ring-2">
               <input type={isShow ? "password" : "text"} placeholder="password" className="accent-green-100 w-full border-0 outline-0"/>

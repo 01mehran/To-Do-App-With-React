@@ -3,7 +3,7 @@ import { Menu } from "@/components/Menu";
 
 export const Calendar = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-6 px-4 py-5 h-screen overflow-hidden">
+    <div className="flex flex-col lg:flex-row gap-6 px-5 py-4 h-screen overflow-hidden">
       {/* Menu */}
       <Menu />
       <div className="w-full flex flex-col h-full">

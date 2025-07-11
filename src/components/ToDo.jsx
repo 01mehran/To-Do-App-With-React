@@ -6,7 +6,7 @@ import { ToDoList } from "./ToDoList";
 
 export const ToDo = ({ context, num, Today }) => {
   return (
-    <div className="w-full h- flex flex-col overflow-hidden">
+    <div className="w-full h-full flex flex-col overflow-hidden">
       {(context || num) && (
         <header className="flex items-baseline gap-5 ">
           <h2 className="font-oswald text-4xl font-normal">{context}</h2>
@@ -15,17 +15,19 @@ export const ToDo = ({ context, num, Today }) => {
           </span>
         </header>
       )}
-      <main className={`border-gray-100 mt-5 flex-1 overflow-y-scroll rounded-4xl border-[1px] px-11 pb-3.5`}>
+      <main className={`border-gray-100 mt-5 overflow-auto rounded-4xl border-[1px] px-11 pb-3.5 h-full w-full`}>
         <div className="sticky top-0 w-full bg-[#ffffff] pt-3.5">
           <h3 className="font-oswald text-4xl font-normal">{Today}</h3>
-          <article className="border-gray-100 mt-5 flex h-10 items-center gap-2 rounded-[12px] border-[1px] px-2">
-            <img src={plusIcon} alt="plusIcon" className="w-4" />
+          <form className="border-gray-100 mt-5 flex h-10 items-center gap-2 rounded-[12px] border-[1px] px-2" >
+            <button type="submit" className="cursor-pointer">
+              <img src={plusIcon} alt="plusIcon" className="w-4" />
+            </button>
             <input
               type="text"
               className="h-full flex-1 border-0 outline-0"
               placeholder="Add new tasks"
             />
-          </article>
+          </form>
         </div>
         {/* Todo List */}
         <ToDoList />

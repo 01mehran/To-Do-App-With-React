@@ -13,7 +13,7 @@ import LogoutIcon from "@icons/logoutIcon.svg";
 export const DesktopMenu = ({ isMenuCollapse, toggleMenuCollapse }) => {
   return (
     //Container; 
-    <div className={`bg-gray-300 sticky top-4 h-[95vh] w-full overflow-y-hidden py-6 text-lg transition-all duration-200 ease-in-out 
+    <div className={`bg-gray-300 sticky top-4 h-[95vh] w-full overflow-hidden py-6 text-lg transition-all duration-200 ease-in-out 
       ${isMenuCollapse ? "max-w-[350px] rounded-[50px] px-10" : "max-w-[200px] rounded-[30px] px-5"} hidden lg:block`}>
         {/* Header */}
         <header className="flex items-center justify-between">
