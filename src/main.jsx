@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 // Global Css;
-import "./css/index.css";
+import "./index.css";
 
 // Components
 import { App } from "./App.jsx";

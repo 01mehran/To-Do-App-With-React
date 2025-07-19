@@ -1,7 +1,6 @@
-
 /* Fonts */
 @font-face {
-  font-family: Oswald;
+  font-family: "oswald";
   src:
     url("@fonts/Oswald/oswald-variablefont_wght-webfont.woff2") format("woff2"),
     url("@fonts/Oswald/oswald-variablefont_wght-webfont.woff") format("woff"),
@@ -11,14 +10,14 @@
   font-style: normal;
 }
 @font-face {
-  font-family: NotoSans;
+  font-family: 'notoSans';
   src: url("@/assets/fonts/notoSans/NotoSans-VariableFont_wdth,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
-  font-family: Inder;
+  font-family: "inder";
   src:
     url("@fonts/Inder/inder-regular-webfont.woff") format("woff2"),
     url("@fonts/Inder/inder-regular-webfont.woff2") format("woff"),
@@ -31,9 +30,9 @@
 
 @theme {
   /*------- Fonts */
-  --font-oswald: "Oswald", "sans-serif";
-  --font-notoSans: "NotoSans", "sans-serif";
-  --font-inder: "Inder", "sans-serif";
+  --font-oswald: "oswald", sans-serif;
+  --font-notoSans: "notoSans", sans-serif;
+  --font-inder: "inder", sans-serif;
 
   /*------- Colors */
   --color-gray-100: #c4c4c4;
@@ -60,4 +59,3 @@
 ::-webkit-scrollbar {
   display: none;
 }
-

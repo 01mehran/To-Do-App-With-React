@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export const Tasks = ({isMenuCollapse}) => {
   
   return (
-    <section className="mt-6">
+    <section>
       <div>
         <h3 className="font-oswald text-[15px] font-semibold">Tasks</h3>
         <section className="mt-2 flex flex-col gap-5 px-3">

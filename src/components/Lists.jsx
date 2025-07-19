@@ -3,7 +3,7 @@ import plusIcon from "@icons/plusIcon.svg";
 
 export const Lists = () => {
   return (
-    <section className="mt-6">
+    <section>
       <div>
         <h3 className="font-oswald text-[15px] font-semibold">Lists</h3>
 

@@ -24,7 +24,7 @@ export const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
       <h3 className="text-2xl font-oswald font-medium lg:hidden">To-Do App</h3>
     </article>
 
-      <div className={`fixed top-0 left-0 h-full w-[250px] rounded-tr-[30px]  bg-gray-300 shadow-lg shadow-gray-500 rounded-rb-[50px] flex flex-col justify-evenly px-5  z-100 transition-transform duration-300 ease-in-out lg:hidden ${ isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
+      <div className={`fixed top-0 left-0 h-full w-[250px] rounded-tr-[30px]  bg-gray-300 shadow-lg shadow-gray-500 rounded-rb-[50px] flex flex-col justify-evenly px-5 py-4  z-100 transition-transform duration-300 ease-in-out lg:hidden ${ isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
        {/* Header */}
         <header className="flex items-center justify-between">
           <h1 className={`font-oswald font-semibold1 text-4xl ${ isMenuOpen ? "" : "text-[25px]"}`}>
@@ -37,7 +37,7 @@ export const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
         </header>
 
         {/* Main Content */}
-        <main>
+        <main className="h-full flex flex-col justify-evenly">
 
           {/* Search Box */}
           <div className="bg-gray-200 flex h-9 items-center rounded-full pl-4">
@@ -52,7 +52,7 @@ export const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
           <Lists />
 
           {/* footer */}
-          <footer className="mt-5">
+          <footer>
             <div className="flex flex-col gap-2">
               <article className="group flex cursor-pointer items-center space-x-4">
                 <img src={settingIcon} alt="settingIcon" className="group-hover:bg-green-200 rounded-full transition-all duration-300 group-hover:p-1"/>
@@ -63,7 +63,7 @@ export const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
               <article className="group flex cursor-pointer items-center space-x-4">
                 <img src={LogoutIcon} alt="settingIcon" className="group-hover:bg-red rounded-full transition-all duration-300 group-hover:p-1"/>
                 <p className="font-notoSans group-hover:text-red text-lg text-black/70">
-                  Log Out{" "}
+                  Log Out
                 </p>
               </article>
             </div>

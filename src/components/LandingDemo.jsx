@@ -21,7 +21,9 @@ export const LandingDemo = () => {
               responsibilities.
             </p>
             {/* Button */}
-            <button type="button" className="bg-green-100 font-inder block w-full cursor-pointer rounded-[10px] py-2 text-base font-medium transition-all hover:translate-y-px">Get Started</button>
+            <Link to="/LogIn">
+              <button type="button" className="bg-green-100 font-inder block w-full cursor-pointer rounded-[10px] py-2 text-base font-medium transition-all hover:translate-y-px">Get Started</button>
+            </Link>
             <p className="font-notoSans text-center text-[15px] font-medium mt-7">Already have an account?  <Link to="/login" className="hover:text-green-200">Sign In</Link></p>
           </section>
         </main>
