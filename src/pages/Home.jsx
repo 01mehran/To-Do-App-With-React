@@ -1,17 +1,28 @@
 // components;
 import { Menu } from "@/components/Menu";
+import { showSuccessToast, Toast } from "@/components/Toast";
 
-// Link;
+// libraries;
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Home = () => {
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+
+    if (userData) {
+      const user = JSON.parse(userData);
+      showSuccessToast(`Welcom ${user.username}`);
+    }
+  }, []);
+
   return (
-    <div className=" px-5 py-4 gap-6 bg-gray-300 lg:bg-[#fff] min-h-screen grid grid-rows-[auto_1fr] lg:flex ">
+    <div className="grid min-h-screen grid-rows-[auto_1fr] gap-6 bg-gray-300 px-5 py-4 lg:flex lg:bg-[#fff]">
       <Menu />
       {/* Main Content */}
-      <main className=" grid w-full bg-transparent place-content-center rounded-[50px] lg:bg-gray-300">
-        <div className="max-w-[500px] space-y-14 sm:space-y-16 text-center bg-gray-300">
-          <h3 className="font-oswald text-3xl sm:text-4xl font-normal text-black">
+      <main className="grid w-full place-content-center rounded-[50px] bg-transparent lg:bg-gray-300">
+        <div className="max-w-[500px] space-y-14 bg-gray-300 text-center sm:space-y-16">
+          <h3 className="font-oswald text-3xl font-normal text-black sm:text-4xl">
             Wellcome to ToDoPy
           </h3>
           <p className="font-notoSans text-[15px] leading-6 font-normal">
@@ -25,12 +36,14 @@ export const Home = () => {
           </p>
           {/* Button */}
           <Link to="/Upcoming">
-            <button className="font-oswald bg-green-100 h-[42px] max-w-[218px] w-full cursor-pointer rounded-[10px] text-xl sm:text-[24px] font-normal transition-all duration-300 hover:translate-y-1">
+            <button className="font-oswald h-[42px] w-full max-w-[218px] cursor-pointer rounded-[10px] bg-green-100 text-xl font-normal transition-all duration-300 hover:translate-y-1 sm:text-[24px]">
               Go to tasks
             </button>
           </Link>
         </div>
       </main>
+      {/* Toast notification */}
+      <Toast />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-// liberaries;
+// libraries ;
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -9,8 +9,8 @@ import { ToDoImg } from "./ToDoImg";
 import { ErrorMessage } from "./ErrorMessage";
 import { Toast } from "./Toast";
 import { showErrorToast, showSuccessToast } from "@/components/Toast";
-import { SignUpForm } from "@/services/Api";
 import { ValidateEmail } from "./ValidateEmail";
+import { SignUpForm } from "@/services/SignUpRequest";
 
 // Icons;
 import { FaEye } from "react-icons/fa";
@@ -113,7 +113,7 @@ export const Register = () => {
     if (!data.password.trim()) {
       errors.password = "Enter your password!";
     } else if (data.password.length < 6) {
-      errors.password = "Password mist be 6";
+      errors.password = "Password must be 6";
     }
 
     if (!data.repeatPassword.trim()) {
