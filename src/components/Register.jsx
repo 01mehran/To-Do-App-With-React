@@ -1,5 +1,5 @@
 // libraries ;
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +11,7 @@ import { Toast } from "./Toast";
 import { showErrorToast, showSuccessToast } from "@/components/Toast";
 import { ValidateEmail } from "./ValidateEmail";
 import { SignUpForm } from "@/services/SignUpRequest";
+import { PassShowHideContext } from "./PassShowHideContext";
 
 // Icons;
 import { FaEye } from "react-icons/fa";
@@ -18,7 +19,7 @@ import { FaEyeSlash } from "react-icons/fa";
 
 export const Register = () => {
   // States;
-  const [isShow, setIsShow] = useState(true);
+  const { isShow, showHideHander } = useContext(PassShowHideContext);
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -29,11 +30,6 @@ export const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   //-----> Functions;
-
-  // ُShow?/Hide password;
-  const showHideHander = () => {
-    setIsShow(!isShow);
-  };
 
   // Get inputs value;
   const handleChange = (e) => {
@@ -54,7 +50,6 @@ export const Register = () => {
   // Submit form;
   const handleSubmit = async (e) => {
     e.preventDefault();
-
 
     const errorValidation = formErrorValidation(formData);
 

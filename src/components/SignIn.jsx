@@ -1,5 +1,5 @@
 // Libraries;
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 // Components;
@@ -9,14 +9,13 @@ import { ValidateEmail } from "./ValidateEmail";
 import { ErrorMessage } from "./ErrorMessage";
 import { SignInRequest } from "@/services/SignInRequest";
 import { showErrorToast, Toast } from "./Toast";
+import { PassShowHideContext } from "./PassShowHideContext";
 
 // Icons;
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 
 export const SignIn = () => {
-  // Hooks;
-  const [isShow, setIsShow] = useState("false");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -24,12 +23,8 @@ export const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-
+  const { isShow, showHideHander } = useContext(PassShowHideContext);
   // Functions;
-  const showHideHander = () => {
-    setIsShow(!isShow);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -155,8 +150,8 @@ export const SignIn = () => {
           <SocialMediaIcons />
 
           <p className="font-inder mt-6 text-[15px] font-medium text-black">
-            Don't have an account?{" "}
-            <Link to="/signup" className="hover:underline">
+            Don't have an account?
+            <Link to="/signup" className="ml-1 hover:underline">
               Sign up
             </Link>
           </p>
