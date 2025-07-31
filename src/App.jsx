@@ -11,6 +11,7 @@ import { Today } from "./pages/Today";
 import { Calendar } from "./pages/Calendar";
 import { NotFound } from "./pages/NotFound";
 import { PassShowHideProvider } from "./components/PassShowHideContext";
+import { NewTask } from "./pages/NewTask";
 
 export const App = () => {
   return (
@@ -23,6 +24,7 @@ export const App = () => {
         <Route path="/upcoming" element={<Upcoming />} />
         <Route path="/today" element={<Today />} />
         <Route path="/calendar" element={<Calendar />} />
+        <Route path="/newTask" element={<NewTask />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </PassShowHideProvider>
