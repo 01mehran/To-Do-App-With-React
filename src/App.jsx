@@ -10,8 +10,8 @@ import { Upcoming } from "./pages/Upcoming";
 import { Today } from "./pages/Today";
 import { Calendar } from "./pages/Calendar";
 import { NotFound } from "./pages/NotFound";
-import { PassShowHideProvider } from "./components/PassShowHideContext";
 import { NewTask } from "./pages/NewTask";
+import { PassShowHideProvider } from "./Context/PassShowHideContext";
 
 export const App = () => {
   return (

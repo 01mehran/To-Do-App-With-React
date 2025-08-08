@@ -3,8 +3,7 @@ import upComingIcon from "@icons/UpcomIcon.svg";
 import ListIcon from "@icons/listIcon.svg";
 import CalendarIcon from "@icons/calendaricon.svg";
 import NoteIcon from "@icons/NoteIcon.svg";
-import { MdOutlineCreate } from "react-icons/md";
-
+import { AiOutlinePlus } from "react-icons/ai";
 // Link
 import { Link } from "react-router-dom";
 
@@ -18,7 +17,7 @@ export const Tasks = ({ isMenuCollapse }) => {
           <article className="flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-1">
             <div className="flex items-center gap-1.5">
               <span>
-                <MdOutlineCreate />
+                <AiOutlinePlus />
               </span>
               <span className="font-notoSans text-sm font-medium text-black/70">
                 <Link to="/newTask">New Task</Link>
