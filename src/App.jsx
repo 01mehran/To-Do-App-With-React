@@ -12,21 +12,24 @@ import { Calendar } from "./pages/Calendar";
 import { NotFound } from "./pages/NotFound";
 import { NewTask } from "./pages/NewTask";
 import { PassShowHideProvider } from "./Context/PassShowHideContext";
+import { TaskProvider } from "./context/TaskContext";
 
 export const App = () => {
   return (
     <PassShowHideProvider>
-      <Routes>
-        <Route path="/" element={<Started />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/upcoming" element={<Upcoming />} />
-        <Route path="/today" element={<Today />} />
-        <Route path="/calendar" element={<Calendar />} />
-        <Route path="/newTask" element={<NewTask />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <TaskProvider>
+        <Routes>
+          <Route path="/" element={<Started />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/upcoming" element={<Upcoming />} />
+          <Route path="/today" element={<Today />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/newTask" element={<NewTask />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </TaskProvider>
     </PassShowHideProvider>
   );
 };

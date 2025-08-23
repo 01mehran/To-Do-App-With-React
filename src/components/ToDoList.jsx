@@ -1,10 +1,12 @@
 // Components;
 import { ToDoItem } from "./ToDoItem";
 
-export const ToDoList = () => {
+export const ToDoList = ({ tasks }) => {
   return (
-    <ul className="mt-2">
-      <ToDoItem />
+    <ul>
+      {tasks.map((tsk) => (
+        <ToDoItem tasks={tsk} key={tsk.id} />
+      ))}
     </ul>
   );
 };

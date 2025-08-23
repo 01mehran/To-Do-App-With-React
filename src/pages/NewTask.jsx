@@ -1,10 +1,10 @@
 // Libraries;
 import { useState } from "react";
-import { showErrorToast, Toast } from "../components/Toast";
+import { showErrorToast, showSuccessToast, Toast } from "@/components/Toast";
 
 // Componenets;
-import { CreateNewTask } from "@/services/CreateNewTask";
 import { Menu } from "@/components/Menu";
+import { UseCreateNewTask } from "@/services/UseCreateNewTask";
 
 export const NewTask = () => {
   // States
@@ -12,8 +12,8 @@ export const NewTask = () => {
   const [dueDate, setDueDate] = useState("");
   const [type, setType] = useState("work");
   const [isLoading, setIsLoading] = useState(false);
-
   // Functions;
+  const createTask = UseCreateNewTask();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,13 +23,14 @@ export const NewTask = () => {
     if (title.trim() && dueDate.trim()) {
       try {
         setIsLoading(true);
-        const res = await CreateNewTask(title, dueTimeStamp, type);
+        const res = await createTask(title, dueTimeStamp, type);
 
         setTitle("");
         setDueDate("");
         setType("work");
+        showSuccessToast("Task Added succefully ");
       } catch (err) {
-        console.log(err);
+        console.error(err);
         const errorMessage = err.response?.data?.error?.message;
         showErrorToast(errorMessage || "Something went wrong");
       } finally {

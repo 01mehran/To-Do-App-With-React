@@ -5,7 +5,7 @@ import { useState } from "react";
 import { MobileMenu } from "./MobileMenu";
 import { DesktopMenu } from "./DesktopMenu";
 
-export const Menu = () => {
+export const Menu = ({ num }) => {
   // States;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuCollapse, setIsMenuCollapse] = useState(true);
@@ -16,13 +16,13 @@ export const Menu = () => {
   };
 
   const toggleMenuCollapse = () => {
-    setIsMenuCollapse(!isMenuCollapse)
-  }
+    setIsMenuCollapse(!isMenuCollapse);
+  };
   return (
     <div className="relative">
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/30 bg-opacity-40 z-40 lg:hidden"
+          className="bg-opacity-40 fixed inset-0 z-40 bg-black/30 lg:hidden"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
@@ -30,7 +30,11 @@ export const Menu = () => {
       <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
       {/* Desktop Menu */}
-      <DesktopMenu isMenuCollapse={isMenuCollapse} toggleMenuCollapse={toggleMenuCollapse} />
+      <DesktopMenu
+        num={num}
+        isMenuCollapse={isMenuCollapse}
+        toggleMenuCollapse={toggleMenuCollapse}
+      />
     </div>
   );
 };
