@@ -5,7 +5,7 @@ import { useState } from "react";
 import { MobileMenu } from "./MobileMenu";
 import { DesktopMenu } from "./DesktopMenu";
 
-export const Menu = ({ num }) => {
+export const Menu = ({ num, num2 }) => {
   // States;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuCollapse, setIsMenuCollapse] = useState(true);
@@ -32,6 +32,7 @@ export const Menu = ({ num }) => {
       {/* Desktop Menu */}
       <DesktopMenu
         num={num}
+        num2={num2}
         isMenuCollapse={isMenuCollapse}
         toggleMenuCollapse={toggleMenuCollapse}
       />

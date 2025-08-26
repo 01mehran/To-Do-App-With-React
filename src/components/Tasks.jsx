@@ -7,7 +7,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 // Link
 import { Link } from "react-router-dom";
 
-export const Tasks = ({ isMenuCollapse, num }) => {
+export const Tasks = ({ isMenuCollapse, num, num2 }) => {
  
   return (
     <section>
@@ -52,7 +52,7 @@ export const Tasks = ({ isMenuCollapse, num }) => {
             <span
               className={`text font-notoSans w-7 rounded-full bg-gray-200 text-center text-[11px] text-black/70 ${isMenuCollapse ? "" : "hidden"}`}
             >
-              8
+              {num2}
             </span>
           </article>
 

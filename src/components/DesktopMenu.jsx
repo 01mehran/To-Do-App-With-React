@@ -10,7 +10,7 @@ import serachIcon from "@icons/search_icon.svg";
 import settingIcon from "@icons/settingIcon.png";
 import LogoutIcon from "@icons/logoutIcon.svg";
 
-export const DesktopMenu = ({ isMenuCollapse, toggleMenuCollapse, num }) => {
+export const DesktopMenu = ({ isMenuCollapse, toggleMenuCollapse, num, num2 }) => {
   return (
     //Container;
     <div
@@ -47,7 +47,7 @@ export const DesktopMenu = ({ isMenuCollapse, toggleMenuCollapse, num }) => {
         </div>
 
         {/* Tasks */}
-        <Tasks num={num} isMenuCollapse={isMenuCollapse} />
+        <Tasks num={num} num2={num2} isMenuCollapse={isMenuCollapse} />
 
         {/* Lists */}
         <Lists />
