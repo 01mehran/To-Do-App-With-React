@@ -4,8 +4,9 @@ import ListIcon from "@icons/listIcon.svg";
 import CalendarIcon from "@icons/calendaricon.svg";
 import NoteIcon from "@icons/NoteIcon.svg";
 import { AiOutlinePlus } from "react-icons/ai";
-// Link
-import { Link } from "react-router-dom";
+
+// Libraries;
+import {NavLink} from "react-router-dom"
 
 export const Tasks = ({ isMenuCollapse, num, num2 }) => {
  
@@ -15,23 +16,23 @@ export const Tasks = ({ isMenuCollapse, num, num2 }) => {
         <h3 className="font-oswald text-[15px] font-semibold">Tasks</h3>
         <section className="mt-2 flex flex-col gap-4 px-3">
           {/* New task */}
-          <article className="flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-1">
+          <NavLink to={"/newTask"} className={({isActive}) => `flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-2 rounded-2xl py-1 ${isActive ? "bg-neutral-200 px-2" : ""}`}>
             <div className="flex items-center gap-1.5">
               <span>
                 <AiOutlinePlus />
               </span>
               <span className="font-notoSans text-sm font-medium text-black/70">
-                <Link to="/newTask">New Task</Link>
+                New Task
               </span>
             </div>
-          </article>
+          </NavLink>
 
           {/* Upcoming */}
-          <article className="flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-1">
+          <NavLink to={"/upcoming"} className={({isActive}) => `flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-2 rounded-2xl py-1 ${isActive ? "bg-neutral-200 px-2" : ""}`}>
             <div className="flex items-center gap-1.5">
               <img src={upComingIcon} alt="upComingIcon" className="w-5" />
               <span className="font-notoSans text-sm font-medium text-black/70">
-                <Link to="/upcoming">Upcoming</Link>
+                Upcoming
               </span>
             </div>
             <span
@@ -39,14 +40,14 @@ export const Tasks = ({ isMenuCollapse, num, num2 }) => {
             >
               {num}
             </span>
-          </article>
+          </NavLink>
 
           {/* Today */}
-          <article className="flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-1">
+          <NavLink to={"/today"} className={({isActive}) => `flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-2 rounded-2xl py-1 ${isActive ? "bg-neutral-200 px-2" : ""}`}>
             <div className="flex items-center gap-1.5">
               <img src={ListIcon} alt="ListIcon" className="w-5" />
               <span className="font-notoSans text-sm font-medium text-black/70">
-                <Link to="/today">Today</Link>
+                Today
               </span>
             </div>
             <span
@@ -54,17 +55,17 @@ export const Tasks = ({ isMenuCollapse, num, num2 }) => {
             >
               {num2}
             </span>
-          </article>
+          </NavLink>
 
           {/* Calender */}
-          <article className="cursor-pointer transition-all duration-300 hover:px-1">
+          <NavLink to={"/calendar"} className={({isActive}) => `flex cursor-pointer items-center justify-between transition-all duration-300 hover:px-2 rounded-2xl py-1 ${isActive ? "bg-neutral-200 px-2" : ""}`}>
             <div className="flex items-center gap-1.5">
               <img src={CalendarIcon} alt="CalendarIcon" className="w-5" />
               <span className="font-notoSans text-sm font-medium text-black/70">
-                <Link to="/calendar">Calendar</Link>
+                Calendar
               </span>
             </div>
-          </article>
+          </NavLink>
 
           {/* Sticky Wall */}
           <article className="cursor-pointer transition-all duration-300 hover:px-1">
