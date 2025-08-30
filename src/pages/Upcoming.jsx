@@ -5,15 +5,43 @@ import { useState, useEffect, useRef } from "react";
 import { Menu } from "@/components/Menu";
 import { ToDo } from "@/components/ToDo";
 import { useTasks } from "@/context/TaskContext";
+import axios from "axios";
 
 export const Upcoming = () => {
   // Context;
-  const { tasks } = useTasks();
+  const { tasks, setTasks } = useTasks();
+  const [isLoading, setIsLoading] = useState(false);
 
   // States;
   const [todayTasks, setTodayTasks] = useState([]);
   const [tomorrowTasks, setTomorrowTasks] = useState([]);
   const [thisWeekTasks, setThisWeekTasks] = useState([]);
+
+  const getTasksList = async () => {
+    const TOKEN =
+      " eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjQsImlhdCI6MTc1NTM0Njc1NSwiZXhwIjoxNzU3OTM4NzU1fQ.eylik0-zX0TjRg2jDhZwjpWvc3Su2royip9NV4oIYkI";
+    setIsLoading(true);
+    try {
+      const tasksList = await axios.get(
+        "https://strapi.arvanschool.ir/api/to-dos?pagination[page]=1&pagination[pageSize]=200",
+        {
+          headers: {
+            Authorization: `Bearer ${TOKEN}`,
+            "Content-Type": "application/json",
+          },
+        },
+      );
+      setTasks(tasksList.data.data);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getTasksList();
+  }, []);
 
   const today = useRef(new Date());
   const tomorrow = useRef(new Date());
@@ -82,11 +110,12 @@ export const Upcoming = () => {
             context="Upcoming"
             num={upcomingLength}
             Today="Today"
+            isloading={isLoading}
           />
         </div>
         <div className="h-screen w-full flex-col md:space-x-5 lg:flex lg:h-full lg:flex-row">
-          <ToDo tasks={tomorrowTasks} Today="Tomorrow" />
-          <ToDo tasks={thisWeekTasks} Today="This Week" />
+          <ToDo tasks={tomorrowTasks} Today="Tomorrow" isloading={isLoading} />
+          <ToDo tasks={thisWeekTasks} Today="This Week" isloading={isLoading} />
         </div>
       </div>
     </div>

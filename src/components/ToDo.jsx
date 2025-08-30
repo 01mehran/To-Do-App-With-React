@@ -5,7 +5,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { ToDoList } from "./ToDoList";
 import { Link } from "react-router-dom";
 
-export const ToDo = ({ context, num, Today, tasks = [] }) => {
+export const ToDo = ({ context, num, Today, tasks = [], isloading }) => {
   return (
     <div className="flex h-full w-full flex-col overflow-hidden">
       {(context || num) && (
@@ -32,7 +32,7 @@ export const ToDo = ({ context, num, Today, tasks = [] }) => {
           <hr className="border-px mt-3 w-full border-gray-100" />
         </div>
         {/* Todo List */}
-        <ToDoList tasks={tasks} />
+        <ToDoList tasks={tasks} isloading={isloading} />
       </main>
     </div>
   );

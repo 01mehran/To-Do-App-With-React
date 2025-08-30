@@ -15,7 +15,7 @@ export const ToDoItem = ({ tasks }) => {
   return (
     <>
       <li className="flex items-center justify-between border-b-[1px] border-black/30 px-2 py-3">
-      {/* Tasks title; */}
+        {/* Tasks title; */}
         <div className="flex items-center gap-3">
           <input
             id={`${tasks.id}`}
@@ -32,13 +32,13 @@ export const ToDoItem = ({ tasks }) => {
 
         {/* Buttons */}
         <div className="flex items-center gap-3">
-       {/* Edit button; */}
-          <button className="cursor-pointer text-lg text-black/70  transition-all duration-200 hover:text-green-500">
+          {/* Edit button; */}
+          <button className="cursor-pointer text-lg text-black/70 transition-all duration-200 hover:text-green-500">
             <FaRegEdit />
           </button>
           {/* Delete button; */}
           <button
-            className="hover:text-red-500 cursor-pointer text-black/70 text-lg transition-all duration-200"
+            className="cursor-pointer text-lg text-black/70 transition-all duration-200 hover:text-red-500"
             onClick={() => handleDelete(tasks.documentId)}
           >
             {/* {isLoading === tasks.documentId ? (
@@ -48,7 +48,7 @@ export const ToDoItem = ({ tasks }) => {
             )} */}
 
             {loadingIds.includes(tasks.documentId) ? (
-              <div className="border-red-500 mx-auto h-4 w-4 animate-spin rounded-full border-[2px] border-t-transparent"></div>
+              <div className="mx-auto h-4 w-4 animate-spin rounded-full border-[2px] border-red-500 border-t-transparent"></div>
             ) : (
               <AiOutlineDelete />
             )}
