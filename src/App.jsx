@@ -13,6 +13,9 @@ import { NotFound } from "./pages/NotFound";
 import { NewTask } from "./pages/NewTask";
 import { PassShowHideProvider } from "./Context/PassShowHideContext";
 import { TaskProvider } from "./context/TaskContext";
+import { Work } from "./pages/Work";
+import { Personal } from "./pages/Personal";
+import { Study } from "./pages/Study";
 
 export const App = () => {
   return (
@@ -27,6 +30,9 @@ export const App = () => {
           <Route path="/today" element={<Today />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/newTask" element={<NewTask />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/personal" element={<Personal />} />
+          <Route path="/study" element={<Study />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </TaskProvider>
