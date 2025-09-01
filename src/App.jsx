@@ -13,12 +13,10 @@ import { NotFound } from "./pages/NotFound";
 import { NewTask } from "./pages/NewTask";
 import { PassShowHideProvider } from "./Context/PassShowHideContext";
 import { TaskProvider } from "./context/TaskContext";
-import { Toast } from "./components/Toast";
 
 export const App = () => {
   return (
     <PassShowHideProvider>
-      <Toast />
       <TaskProvider>
         <Routes>
           <Route path="/" element={<Started />} />

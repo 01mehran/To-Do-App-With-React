@@ -27,7 +27,7 @@ export const UseCreateNewTask = () => {
       );
 
       const getData = await axios.get(
-        "https://strapi.arvanschool.ir/api/to-dos",
+        "https://strapi.arvanschool.ir/api/to-dos?pagination[page]=1&pagination[pageSize]=200",
         {
           headers: {
             Authorization: `Bearer ${TOKEN}`,
@@ -35,8 +35,7 @@ export const UseCreateNewTask = () => {
           },
         },
       );
-      console.log(sendData);
-      console.log(getData);
+      
       setTasks(getData.data.data);
     } catch (err) {
       throw err;
