@@ -4,6 +4,8 @@ import { useState } from "react";
 //Components;
 import { MobileMenu } from "./MobileMenu";
 import { DesktopMenu } from "./DesktopMenu";
+import { useNavigate } from "react-router-dom";
+import { showErrorToast } from "./Toast";
 
 export const Menu = ({ num, num2 }) => {
   // States;
@@ -18,6 +20,19 @@ export const Menu = ({ num, num2 }) => {
   const toggleMenuCollapse = () => {
     setIsMenuCollapse(!isMenuCollapse);
   };
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    
+    if (window.confirm) {
+      alert("Are you sure to LogOut? ");
+    }
+    localStorage.clear();
+
+    showErrorToast("You Logged out!");
+    setTimeout(() => navigate("/signUp"), 1500);
+  };
+
   return (
     <div className="relative">
       {isMenuOpen && (
@@ -27,7 +42,11 @@ export const Menu = ({ num, num2 }) => {
         />
       )}
       {/* Mobile Menu */}
-      <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <MobileMenu
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+        onLogOut={handleLogOut}
+      />
 
       {/* Desktop Menu */}
       <DesktopMenu

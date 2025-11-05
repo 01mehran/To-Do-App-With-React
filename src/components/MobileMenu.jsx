@@ -10,7 +10,7 @@ import serachIcon from "@icons/search_icon.svg";
 import settingIcon from "@icons/settingIcon.png";
 import LogoutIcon from "@icons/logoutIcon.svg";
 
-export const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
+export const MobileMenu = ({ isMenuOpen, toggleMenu, onLogOut }) => {
   return (
     <>
     {/* Menu Toggle Button; */}
@@ -62,7 +62,7 @@ export const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
               </article>
               <article className="group flex cursor-pointer items-center space-x-4">
                 <img src={LogoutIcon} alt="settingIcon" className="group-hover:bg-red rounded-full transition-all duration-300 group-hover:p-1"/>
-                <p className="font-notoSans group-hover:text-red text-lg text-black/70">
+                <p onClick={onLogOut} className="font-notoSans group-hover:text-red text-lg text-black/70">
                   Log Out
                 </p>
               </article>
