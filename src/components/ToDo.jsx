@@ -19,7 +19,7 @@ export const ToDo = ({ context, num, Today, tasks = [], isloading }) => {
       <main
         className={`mt-5 h-2/2 w-full overflow-auto rounded-4xl border-[1px] border-gray-100 px-11 pb-3.5`}
       >
-        <div className="sticky top-0 w-full bg-[#ffffff] pt-3.5">
+        <div className="sticky top-0 z-10 w-full bg-[#ffffff] pt-3.5">
           <div className="flex items-baseline justify-between">
             <h3 className="font-oswald text-4xl font-normal">{Today}</h3>
             <Link

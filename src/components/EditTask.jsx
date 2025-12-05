@@ -23,43 +23,41 @@ export const EditTask = ({ task, onClose, setIsLoading, isLoading }) => {
 
   const handleEditTask = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
+    setIsLoading(true);
     try {
       await updateTask(task.documentId, title, dueTimeStamp, type);
       onClose();
     } catch (err) {
       showErrorToast(err.message);
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
-    finally{
-      setIsLoading(false)
-    }
-    
   };
 
   return (
     <>
       <form
         onSubmit={handleEditTask}
-        className="inset-3 w-full rounded-xl border-2 border-black/30 py-3 shadow-xl backdrop-blur-sm"
+        className="inset-3 w-full rounded-xl border-black/30 py-3 shadow-[2px_2px_6px_rgba(0,0,0,0.2)] backdrop-blur-sm"
       >
         {/* Title */}
         <div className="flex flex-wrap justify-around gap-2">
           <input
             type="text"
-            className="w-4/6 rounded-sm border-2 border-gray-100 px-2 py-1 outline-0"
+            className="w-4/6 rounded-sm border-1 border-gray-100 px-2 py-1 outline-0"
             placeholder="Enter your task"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
           <input
             type="date"
-            className="w-4/6 rounded-sm border-2 border-gray-100 px-2 py-1 outline-0"
+            className="w-4/6 rounded-sm border-1 border-gray-100 px-2 py-1 outline-0"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
           />
         </div>
-      {/* Types */}
+        {/* Types */}
         <div className="flex justify-center space-x-3 py-3">
           <div className="flex gap-2">
             <label htmlFor="work" className="font-inder font-medium">
@@ -107,9 +105,13 @@ export const EditTask = ({ task, onClose, setIsLoading, isLoading }) => {
         <div className="flex justify-center gap-3">
           <button
             type="submit"
-            className={`cursor-pointer rounded-sm bg-green-100 w-20 ring-2 ring-green-100 transition duration-150 hover:ring-offset-1 active:ring-0 ${isLoading && "pointer-events-none opacity-70"}`}
+            className={`w-20 cursor-pointer rounded-sm bg-green-100 ring-2 ring-green-100 transition duration-150 hover:ring-offset-1 active:ring-0 ${isLoading && "pointer-events-none opacity-70"}`}
           >
-            {isLoading ? (<div className="mx-auto size-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>) : "Save"}
+            {isLoading ? (
+              <div className="mx-auto size-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+            ) : (
+              "Save"
+            )}
           </button>
           <button
             type="button"
