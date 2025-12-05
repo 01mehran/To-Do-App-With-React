@@ -1,8 +1,6 @@
 // Icons;
 import upComingIcon from "@icons/UpcomIcon.svg";
 import ListIcon from "@icons/listIcon.svg";
-import CalendarIcon from "@icons/calendaricon.svg";
-import NoteIcon from "@icons/NoteIcon.svg";
 import { AiOutlinePlus } from "react-icons/ai";
 
 // Libraries;

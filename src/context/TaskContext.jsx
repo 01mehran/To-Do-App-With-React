@@ -11,7 +11,6 @@ export const TaskContext = createContext();
 export const TaskProvider = ({ children }) => {
 
   const [tasks, setTasks] = useState([]);
-  // const [isLoading, setIsLoading] = useState(null);
   const [loadingIds, setLoadingIds] = useState([]);
   
   const HandleDeleteTask = async (docId) => {

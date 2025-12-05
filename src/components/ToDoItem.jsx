@@ -6,7 +6,6 @@ import { useState } from "react";
 import { EditTask } from "./EditTask";
 
 export const ToDoItem = ({ tasks }) => {
-  // const { HandleDeleteTask, isLoading } = useTasks();
   const { HandleDeleteTask, loadingIds } = useTasks();
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
