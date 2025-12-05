@@ -60,11 +60,8 @@ export const Register = () => {
     try {
       // Show Loadign icon;
       setIsLoading(true);
-      const { jwt, user } = await SignUpForm(formData);
+      await SignUpForm(formData);
 
-      // Save users data;
-      localStorage.setItem("jwt", jwt);
-      localStorage.setItem("user", JSON.stringify(user));
 
       showSuccessToast(`sign up was successful`);
       // Go to login form;

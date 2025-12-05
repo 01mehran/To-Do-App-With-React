@@ -9,7 +9,7 @@ export const ToDoItem = ({ tasks }) => {
   // const { HandleDeleteTask, isLoading } = useTasks();
   const { HandleDeleteTask, loadingIds } = useTasks();
   const [isEditing, setIsEditing] = useState(false);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleDelete = () => {
     if (window.confirm("Delete this task?")) {
@@ -50,12 +50,6 @@ export const ToDoItem = ({ tasks }) => {
                 className="cursor-pointer text-lg text-black/70 transition-all duration-200 hover:text-red-500"
                 onClick={() => handleDelete(tasks.documentId)}
               >
-                {/* {isLoading === tasks.documentId ? (
-              <div className="border-red mx-auto h-4 w-4 animate-spin rounded-full border-[2px] border-t-transparent"></div>
-            ) : (
-              <AiOutlineDelete />
-            )} */}
-
                 {loadingIds.includes(tasks.documentId) ? (
                   <div className="mx-auto h-4 w-4 animate-spin rounded-full border-[2px] border-red-500 border-t-transparent"></div>
                 ) : (
@@ -67,7 +61,12 @@ export const ToDoItem = ({ tasks }) => {
         )}
 
         {isEditing && (
-          <EditTask task={tasks} onClose={() => setIsEditing(false)} setIsLoading={setIsLoading} isLoading={isLoading} />
+          <EditTask
+            task={tasks}
+            onClose={() => setIsEditing(false)}
+            setIsLoading={setIsLoading}
+            isLoading={isLoading}
+          />
         )}
       </li>
     </>

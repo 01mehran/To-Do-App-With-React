@@ -50,7 +50,7 @@ export const SignIn = () => {
       const { jwt, user } = await SignInRequest(formData);
 
       // Save users data;
-      localStorage.setItem("jwt", jwt);
+      localStorage.setItem("token", jwt);
       localStorage.setItem("user", JSON.stringify(user));
 
       navigate("/home");

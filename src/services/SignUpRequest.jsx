@@ -17,6 +17,7 @@ export const SignUpForm = async (formData) => {
       },
     );
     console.log(res.data);
+
     return res.data;
   } catch (error) {
     throw error;

@@ -18,8 +18,8 @@ export const Upcoming = () => {
   const [thisWeekTasks, setThisWeekTasks] = useState([]);
 
   const getTasksList = async () => {
-    const TOKEN =
-      " eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjQsImlhdCI6MTc1NTM0Njc1NSwiZXhwIjoxNzU3OTM4NzU1fQ.eylik0-zX0TjRg2jDhZwjpWvc3Su2royip9NV4oIYkI";
+    const TOKEN = localStorage.getItem("token");
+      
     setIsLoading(true);
     try {
       const tasksList = await axios.get(
