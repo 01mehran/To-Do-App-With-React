@@ -47,7 +47,7 @@ export const NewTask = () => {
         <h2 className="font-oswald text-4xl font-normal">New task</h2>
         <form
           onSubmit={handleSubmit}
-          className="mt-5 flex flex-1 items-center justify-center overflow-auto rounded-4xl border-[1px] border-gray-100 p-12 px-11"
+          className="mt-5 flex flex-1 items-center justify-center overflow-auto rounded-4xl border-[1px] border-gray-100 py-12 px-4 "
         >
           <div className="w-full max-w-[600px] space-y-5">
             {/* Title */}
@@ -83,11 +83,11 @@ export const NewTask = () => {
               />
             </article>
             {/* Options; */}
-            <fieldset className="mb-8 border-1 border-gray-100 p-8">
+            <fieldset className="mb-8 border-1 border-gray-100 p-8 w-full rounded-sm">
               <legend className="font-oswal mb-2 block px-2 text-xl font-normal">
                 Select an option
               </legend>
-              <div className="flex flex-wrap items-center justify-center space-x-8">
+              <div className="flex  items-center justify-center space-x-3 sm:space-x-8">
                 {/* Work */}
                 <div className="flex gap-2">
                   <label htmlFor="work" className="font-inder font-medium">

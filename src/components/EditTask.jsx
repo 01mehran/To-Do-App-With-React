@@ -39,7 +39,7 @@ export const EditTask = ({ task, onClose, setIsLoading, isLoading }) => {
     <>
       <form
         onSubmit={handleEditTask}
-        className="inset-3 w-full rounded-xl border-black/30 py-3 shadow-[2px_2px_6px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+        className="inset-3 w-full rounded-xl border-black/30 py-3  backdrop-blur-sm"
       >
         {/* Title */}
         <div className="flex flex-wrap justify-around gap-2">

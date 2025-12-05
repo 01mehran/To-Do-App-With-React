@@ -1,0 +1,63 @@
+curl --location 'https://strapi.arvanschool.ir/api/auth/local/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"username": "yourusername",
+"email": "you@example.com",
+"password": "yourPassword"
+}'
+<!-- ---------------------------- -->
+curl --location 'https://strapi.arvanschool.ir/api/auth/local' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"identifier": "you@example.com",
+"password": "yourPassword"
+}
+mohsendev
+mohsendev@gmail.com
+mohsendev7
+<!-- ----------------------------- -->
+لیست تسک ها
+curl --location 'https://strapi.arvanschool.ir/api/to-dos' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxODA3NDI5LCJleHAiOjE3NTQzOTk0Mjl9.zvLCd7W3iKZ9jR-vS6DZRxAuQ3RCOWBSI7juajg1k94'
+<!-- --------------------------------- -->
+ساخت تسک
+curl --location 'https://strapi.arvanschool.ir/api/to-dos' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxODA3NDI5LCJleHAiOjE3NTQzOTk0Mjl9.zvLCd7W3iKZ9jR-vS6DZRxAuQ3RCOWBSI7juajg1k94' \
+--header 'Content-Type: application/json' \
+--data '{
+"data": {
+"title": "test",
+"dueDate": 1753436624714,
+"type": "work"
+}
+}'
+چه ها type می تونه یکی از این سه نوع رو داشته باشه:
+work
+study
+personal
+<!-- -------------------------------------- -->
+curl --location --request DELETE 'https://strapi.arvanschool.ir/api/to-dos/vkjxta88syuoonpj8bqc5eij' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxODA3NDI5LCJleHAiOjE3NTQzOTk0Mjl9.zvLCd7W3iKZ9jR-vS6DZRxAuQ3RCOWBSI7juajg1k94'
+بچه ها اینجا بعد از to-dos
+documentId رو باید بزارین
+
+<!-- Get by id for update -->
+<!-- -------------------------------------------- -->
+
+curl --location 'https://strapi.arvanschool.ir/api/to-dos/vkjxta88syuoonpj8bqc5eij' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxODA3NDI5LCJleHAiOjE3NTQzOTk0Mjl9.zvLCd7W3iKZ9jR-vS6DZRxAuQ3RCOWBSI7juajg1k94'
+اینجا هم همین طور
+این سرویس کال برای این هست که یه تسک خاص رو پیدا کنیم.
+
+<!-- -------------------------------------------- -->
+curl --location --request PUT 'https://strapi.arvanschool.ir/api/to-dos/l3b3nnm4kuhoqf5huy9eyae9' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxODA3NDI5LCJleHAiOjE3NTQzOTk0Mjl9.zvLCd7W3iKZ9jR-vS6DZRxAuQ3RCOWBSI7juajg1k94' \
+--header 'Content-Type: application/json' \
+--data '{
+"data": {
+"title": "task1",
+"dueDate": 1753554107769,
+"type": "work"
+}
+}'
+و این متد برای ویرایش یک رکورد
