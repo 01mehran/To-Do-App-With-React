@@ -1,5 +1,4 @@
 // Icons;
-import plusIcon from "@icons/plusIcon.svg";
 import { NavLink } from "react-router-dom";
 
 export const Lists = () => {
@@ -8,7 +7,7 @@ export const Lists = () => {
       <div>
         <h3 className="font-oswald text-[15px] font-semibold">Lists</h3>
 
-        <div className="mt-2 flex flex-col gap-3 px-2">
+        <div className="mt-3 flex flex-col gap-4 px-2">
           {/* Work */}
           <NavLink
             to={"/work"}
@@ -47,14 +46,6 @@ export const Lists = () => {
               Study
             </p>
           </NavLink>
-
-          {/* Add new  list */}
-          <article className="flex cursor-pointer items-center space-x-2.5 rounded-full px-1 py-1.5 hover:shadow-sm">
-            <img src={plusIcon} alt="plusicon" className="w-[1rem]" />
-            <p className="font-notoSans text-[ 13px] font-light text-black/70">
-              Add new list
-            </p>
-          </article>
         </div>
       </div>
     </section>

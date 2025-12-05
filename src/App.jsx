@@ -8,7 +8,6 @@ import { SignUp } from "./pages/SignUp";
 import { Home } from "./pages/Home";
 import { Upcoming } from "./pages/Upcoming";
 import { Today } from "./pages/Today";
-import { Calendar } from "./pages/Calendar";
 import { NotFound } from "./pages/NotFound";
 import { NewTask } from "./pages/NewTask";
 import { PassShowHideProvider } from "./Context/PassShowHideContext";
@@ -28,7 +27,6 @@ export const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/upcoming" element={<Upcoming />} />
           <Route path="/today" element={<Today />} />
-          <Route path="/calendar" element={<Calendar />} />
           <Route path="/newTask" element={<NewTask />} />
           <Route path="/work" element={<Work />} />
           <Route path="/personal" element={<Personal />} />

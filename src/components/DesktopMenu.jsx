@@ -10,7 +10,12 @@ import serachIcon from "@icons/search_icon.svg";
 import settingIcon from "@icons/settingIcon.png";
 import LogoutIcon from "@icons/logoutIcon.svg";
 
-export const DesktopMenu = ({ isMenuCollapse, toggleMenuCollapse, num, num2 }) => {
+export const DesktopMenu = ({
+  isMenuCollapse,
+  toggleMenuCollapse,
+  num,
+  num2,
+}) => {
   return (
     //Container;
     <div
