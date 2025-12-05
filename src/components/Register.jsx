@@ -11,7 +11,7 @@ import { Toast } from "./Toast";
 import { showErrorToast, showSuccessToast } from "@/components/Toast";
 import { ValidateEmail } from "./ValidateEmail";
 import { SignUpForm } from "@/services/SignUpRequest";
-import { PassShowHideContext } from "@/Context/PassShowHideContext";
+import { PassShowHideContext } from "@/context/PassShowHideContext";
 // Icons;
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";

@@ -10,7 +10,7 @@ import { Upcoming } from "./pages/Upcoming";
 import { Today } from "./pages/Today";
 import { NotFound } from "./pages/NotFound";
 import { NewTask } from "./pages/NewTask";
-import { PassShowHideProvider } from "./Context/PassShowHideContext";
+import { PassShowHideProvider } from "./context/PassShowHideContext";
 import { TaskProvider } from "./context/TaskContext";
 import { Work } from "./pages/Work";
 import { Personal } from "./pages/Personal";

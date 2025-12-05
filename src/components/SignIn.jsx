@@ -9,7 +9,7 @@ import { ValidateEmail } from "./ValidateEmail";
 import { ErrorMessage } from "./ErrorMessage";
 import { SignInRequest } from "@/services/SignInRequest";
 import { showErrorToast, Toast } from "./Toast";
-import { PassShowHideContext } from "@/Context/PassShowHideContext";
+import { PassShowHideContext } from "@/context/PassShowHideContext";
 
 // Icons;
 import { FaEye } from "react-icons/fa";
