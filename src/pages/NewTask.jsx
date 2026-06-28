@@ -47,9 +47,9 @@ export const NewTask = () => {
         <h2 className="font-oswald text-4xl font-normal">New task</h2>
         <form
           onSubmit={handleSubmit}
-          className="mt-5 flex flex-1 items-center justify-center overflow-auto rounded-4xl border-[1px] border-gray-100 py-12 px-4 "
+          className="mt-5 flex flex-1 items-center justify-center overflow-auto rounded-4xl border border-gray-100 px-4 py-12"
         >
-          <div className="w-full max-w-[600px] space-y-5">
+          <div className="w-full max-w-150 space-y-5">
             {/* Title */}
             <article>
               <label
@@ -61,7 +61,7 @@ export const NewTask = () => {
               <input
                 type="text"
                 id="taskTitile"
-                className="w-full rounded-sm border-1 border-gray-100 px-3 py-2 font-normal outline-0"
+                className="w-full rounded-sm border border-gray-100 px-3 py-2 font-normal outline-0"
                 placeholder="Enter your task title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -77,17 +77,17 @@ export const NewTask = () => {
               </label>
               <input
                 type="date"
-                className="w-full rounded-sm border-1 border-gray-100 px-3 py-2 font-normal outline-0"
+                className="w-full rounded-sm border border-gray-100 px-3 py-2 font-normal outline-0"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
               />
             </article>
             {/* Options; */}
-            <fieldset className="mb-8 border-1 border-gray-100 p-8 w-full rounded-sm">
+            <fieldset className="mb-8 w-full rounded-sm border border-gray-100 p-8">
               <legend className="font-oswal mb-2 block px-2 text-xl font-normal">
                 Select an option
               </legend>
-              <div className="flex  items-center justify-center space-x-3 sm:space-x-8">
+              <div className="flex items-center justify-center space-x-3 sm:space-x-8">
                 {/* Work */}
                 <div className="flex gap-2">
                   <label htmlFor="work" className="font-inder font-medium">

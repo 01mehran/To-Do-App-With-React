@@ -21,7 +21,7 @@ export const Home = () => {
       <Menu />
       {/* Main Content */}
       <main className="grid w-full place-content-center rounded-[50px] bg-transparent lg:bg-gray-300">
-        <div className="max-w-[500px] space-y-14 bg-gray-300 text-center sm:space-y-16">
+        <div className="max-w-125 space-y-14 bg-gray-300 text-center sm:space-y-16">
           <h3 className="font-oswald text-3xl font-normal text-black sm:text-4xl">
             Wellcome to ToDoPy
           </h3>
@@ -36,7 +36,7 @@ export const Home = () => {
           </p>
           {/* Button */}
           <Link to="/Upcoming">
-            <button className="font-oswald h-[42px] w-full max-w-[218px] cursor-pointer rounded-[10px] bg-green-100 text-xl font-normal transition-all duration-300 hover:translate-y-1 sm:text-[24px]">
+            <button className="font-oswald h-10.5 w-full max-w-54.5 cursor-pointer rounded-[10px] bg-green-100 text-xl font-normal transition-all duration-300 hover:translate-y-1 sm:text-[24px]">
               Go to tasks
             </button>
           </Link>
