@@ -119,7 +119,7 @@ export const Register = () => {
       <div className="flex min-h-screen flex-col-reverse items-center justify-center gap-5 px-3 md:flex-row">
         {/* To-Do Image */}
         <ToDoImg />
-        <main className="min-h-600px relative flex w-full flex-col items-center justify-center rounded-[40px] bg-white px-6 sm:max-w-120 sm:px-10 md:px-20">
+        <main className="relative flex min-h-150 w-full flex-col items-center justify-center rounded-[40px] bg-white px-6 sm:max-w-120 sm:px-10 md:px-20">
           {/* Title */}
           <div className="mb-7 w-full">
             <h2 className="font-oswald mb-8 text-left text-4xl font-bold">
