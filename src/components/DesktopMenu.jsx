@@ -19,7 +19,7 @@ export const DesktopMenu = ({
   return (
     //Container;
     <div
-      className={`sticky top-4 h-[95vh] w-full overflow-hidden bg-gray-300 py-4 text-lg transition-all duration-200 ease-in-out ${isMenuCollapse ? "max-w-[350px] rounded-[50px] px-10" : "max-w-[200px] rounded-[30px] px-5"} hidden lg:block`}
+      className={`sticky top-4 h-[95vh] w-full overflow-hidden bg-gray-300 py-4 text-lg transition-all duration-200 ease-in-out ${isMenuCollapse ? "max-w-87.5 rounded-[50px] px-10" : "max-w-50 rounded-[30px] px-5"} hidden lg:block`}
     >
       {/* Header */}
       <header className="flex items-center justify-between">
@@ -32,10 +32,10 @@ export const DesktopMenu = ({
           onClick={toggleMenuCollapse}
           className="flex h-6 w-6 cursor-pointer flex-col items-center justify-evenly"
         >
-          <span className="h-[3px] w-full rounded-[2px] bg-black"></span>
-          <span className="h-[3px] w-full rounded-[2px] bg-black"></span>
-          <span className="h-[3px] w-full rounded-[2px] bg-black"></span>
-          <span className="h-[3px] w-full rounded-[2px] bg-black"></span>
+          <span className="h-0.75 w-full rounded-xs bg-black"></span>
+          <span className="h-0.75 w-full rounded-xs bg-black"></span>
+          <span className="h-0.75 w-full rounded-xs bg-black"></span>
+          <span className="h-0.75 w-full rounded-xs bg-black"></span>
         </button>
       </header>
 

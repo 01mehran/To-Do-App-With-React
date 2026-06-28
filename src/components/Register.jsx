@@ -62,7 +62,6 @@ export const Register = () => {
       setIsLoading(true);
       await SignUpForm(formData);
 
-
       showSuccessToast(`sign up was successful`);
       // Go to login form;
       setTimeout(() => navigate("/login"), 1500);
@@ -120,7 +119,7 @@ export const Register = () => {
       <div className="flex min-h-screen flex-col-reverse items-center justify-center gap-5 px-3 md:flex-row">
         {/* To-Do Image */}
         <ToDoImg />
-        <main className="relative flex min-h-[600px] w-full flex-col items-center justify-center rounded-[40px] bg-white px-6 sm:max-w-[480px] sm:px-10 md:px-20">
+        <main className="min-h-600px relative flex w-full flex-col items-center justify-center rounded-[40px] bg-white px-6 sm:max-w-120 sm:px-10 md:px-20">
           {/* Title */}
           <div className="mb-7 w-full">
             <h2 className="font-oswald mb-8 text-left text-4xl font-bold">
@@ -168,7 +167,7 @@ export const Register = () => {
                 {isShow ? <FaEye /> : <FaEyeSlash />}
               </div>
               <span
-                className={`absolute bottom-[-20px] left-0 mt-3 text-sm text-red-600 opacity-0 ${errors.password && "opacity-100 transition duration-300"}`}
+                className={`absolute bottom-5 left-0 mt-3 text-sm text-red-600 opacity-0 ${errors.password && "opacity-100 transition duration-300"}`}
               >
                 {errors.password}
               </span>

@@ -17,7 +17,7 @@ export const ToDoItem = ({ tasks }) => {
   };
   return (
     <>
-      <li className="flex items-center justify-between border-b-[1px] border-black/30 px-2 py-3">
+      <li className="border-b- flex items-center justify-between border-black/30 px-2 py-3">
         {!isEditing && (
           <>
             {/* Tasks title; */}
@@ -50,7 +50,7 @@ export const ToDoItem = ({ tasks }) => {
                 onClick={() => handleDelete(tasks.documentId)}
               >
                 {loadingIds.includes(tasks.documentId) ? (
-                  <div className="mx-auto h-4 w-4 animate-spin rounded-full border-[2px] border-red-500 border-t-transparent"></div>
+                  <div className="mx-auto h-4 w-4 animate-spin rounded-full border-2 border-red-500 border-t-transparent"></div>
                 ) : (
                   <AiOutlineDelete />
                 )}

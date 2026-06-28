@@ -11,13 +11,13 @@ export const ToDo = ({ context, num, Today, tasks = [], isloading }) => {
       {(context || num) && (
         <header className="flex items-baseline gap-5">
           <h2 className="font-oswald text-4xl font-normal">{context}</h2>
-          <span className="font-notoSans w-[52px] rounded-tl-[100px] rounded-tr-[50px] rounded-br-[100px] rounded-bl-[100px] border-[1px] border-gray-100 text-center text-base font-normal">
+          <span className="font-notoSans w-13 rounded-tl-[100px] rounded-tr-[50px] rounded-br-[100px] rounded-bl-[100px] border border-gray-100 text-center text-base font-normal">
             {num}
           </span>
         </header>
       )}
       <main
-        className={`mt-5 h-2/2 w-full overflow-auto rounded-4xl border-[1px] border-gray-100 px-11 pb-3.5`}
+        className={`mt-5 h-2/2 w-full overflow-auto rounded-4xl border border-gray-100 px-11 pb-3.5`}
       >
         <div className="sticky top-0 z-10 w-full bg-[#ffffff] pt-3.5">
           <div className="flex items-baseline justify-between">

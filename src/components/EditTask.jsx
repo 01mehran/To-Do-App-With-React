@@ -39,20 +39,20 @@ export const EditTask = ({ task, onClose, setIsLoading, isLoading }) => {
     <>
       <form
         onSubmit={handleEditTask}
-        className="inset-3 w-full rounded-xl border-black/30 py-3  backdrop-blur-sm"
+        className="inset-3 w-full rounded-xl border-black/30 py-3 backdrop-blur-sm"
       >
         {/* Title */}
         <div className="flex flex-wrap justify-around gap-2">
           <input
             type="text"
-            className="w-4/6 rounded-sm border-1 border-gray-100 px-2 py-1 outline-0"
+            className="w-4/6 rounded-sm border border-gray-100 px-2 py-1 outline-0"
             placeholder="Enter your task"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
           <input
             type="date"
-            className="w-4/6 rounded-sm border-1 border-gray-100 px-2 py-1 outline-0"
+            className="w-4/6 rounded-sm border border-gray-100 px-2 py-1 outline-0"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
           />

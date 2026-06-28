@@ -92,7 +92,7 @@ export const SignIn = () => {
         {/* To-Do Image */}
         <ToDoImg />
 
-        <main className="flex min-h-[600px] w-full flex-col items-center justify-center rounded-[40px] bg-white px-6 sm:max-w-[480px] sm:px-10 md:px-20">
+        <main className="flex min-h-150 w-full flex-col items-center justify-center rounded-[40px] bg-white px-6 sm:max-w-120 sm:px-10 md:px-20">
           <div className="w-full">
             <h2 className="font-oswald mb-8 text-left text-4xl font-bold">
               Sign in
@@ -141,9 +141,9 @@ export const SignIn = () => {
           </form>
           {/* Divided Or */}
           <div className="relative my-6 flex w-full items-center">
-            <span className="h-px flex-grow bg-gray-100"></span>
+            <span className="h-px grow bg-gray-100"></span>
             <span className="mx-4 text-black/52">Or</span>
-            <span className="h-px flex-grow bg-gray-100"></span>
+            <span className="h-px grow bg-gray-100"></span>
           </div>
 
           {/* Social Media Icons */}
